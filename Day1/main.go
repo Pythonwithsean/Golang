@@ -6,7 +6,7 @@ import (
 
 func testing(num int, arr *[]string) int {
 
-	fmt.Println(arr)
+	fmt.Println(*arr)
 	return num
 
 }
@@ -28,12 +28,14 @@ func main() {
 	g := func(a int, b int) int {
 		return a + b
 	}
-
 	sum := func(a, b int) int { return a + b }(3, 4)
 	println(sum)
 	k := f(g, 2)(2, 3)
 	fmt.Println(k)
 	testing(22, &names)
+	x := (*int)(nil)
+
+	fmt.Println(x)
 	// fmt.Println(rand.Intn(10))
 	// fmt.Println(time.Now().Date())
 	// fmt.Println("Go is Better")
